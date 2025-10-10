@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Resume Screener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Intelligent Resume Screener</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Upload Resumes (PDF/DOCX):</label><br><br>
+            <input type="file" name="resumes" multiple required><br><br>
+            <button type="submit">Analyze Resumes</button>
+        </form>
+
+        {% if results %}
+        <h3>Results:</h3>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Skills Matched</th>
+                <th>Score (%)</th>
+                <th>Status</th>
+            </tr>
+            {% for res in results %}
+            <tr>
+                <td>{{ res.Name }}</td>
+                <td>{{ res.Email }}</td>
+                <td>{{ res.Skills }}</td>
+                <td>{{ res.Score }}</td>
+                <td>{{ res.Status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>

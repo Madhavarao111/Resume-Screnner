@@ -1,0 +1,146 @@
+/* General Body */
+body {
+    font-family: 'Orbitron', 'Courier New', monospace;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Card */
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: rgba(10, 10, 10, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
+    border: 1px solid #00ffff;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #00ffff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
+}
+
+h3 {
+    color: #ff00ff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Form */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ff00ff;
+    border-radius: 8px;
+    background: #0d0d0d;
+    color: #00ffff;
+}
+
+button {
+    display: inline-block;
+    background-color: #ff00ff;
+    color: #0d0d0d;
+    padding: 12px 25px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #00ffff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #000;
+    color: #00ffff;
+    border-bottom: 2px solid #ff00ff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 0, 255, 0.1);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+tr:hover {
+    background-color: rgba(0, 255, 255, 0.3);
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Status Highlights */
+td.Status-Passed {
+    color: #00ff00;
+    font-weight: bold;
+}
+
+td.Status-Failed {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+/* Links */
+a {
+    color: #ff00ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #00ffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
